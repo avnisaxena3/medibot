@@ -1,0 +1,11 @@
+flask
+flask-cors
+langchain
+langchain-community
+langchain-openai
+langchain-anthropic
+python-dotenv
+pydantic
+duckduckgo-search
+openai
+anthropic

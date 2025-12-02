@@ -1,0 +1,154 @@
+/* ---------- GENERAL ---------- */
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+}
+
+body.light {
+    background: #eef3ff;
+    color: #000;
+}
+
+body.dark {
+    background: #0e1117;
+    color: #fff;
+}
+
+/* ---------- CONTAINER ---------- */
+.app-container {
+    width: 420px;
+    background: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+body.light {
+    --card-bg: #ffffff;
+    --primary: #3b6cff;
+    --bubble-user: #3b6cff;
+    --bubble-bot: #e9ecff;
+}
+
+body.dark {
+    --card-bg: #1b1f27;
+    --primary: #5f84ff;
+    --bubble-user: #5f84ff;
+    --bubble-bot: #2a2f3a;
+}
+
+/* ---------- HEADER ---------- */
+header {
+    text-align: center;
+    padding: 20px;
+    background: var(--primary);
+    color: #fff;
+    position: relative;
+}
+
+#toggle-theme {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* ---------- CHAT WINDOW ---------- */
+.chat-window {
+    height: 460px;
+    padding: 15px;
+    overflow-y: auto;
+    background: var(--card-bg);
+}
+
+.message {
+    max-width: 78%;
+    padding: 10px 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    animation: fadeIn 0.3s ease-in;
+    white-space: pre-line;
+}
+
+.user-message {
+    background: var(--bubble-user);
+    color: white;
+    margin-left: auto;
+}
+
+.bot-message {
+    background: var(--bubble-bot);
+    color: inherit;
+}
+
+/* ---------- TYPING INDICATOR ---------- */
+.typing-indicator {
+    display: none;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.typing-indicator span {
+    width: 8px;
+    height: 8px;
+    background: var(--primary);
+    margin: 0 3px;
+    border-radius: 50%;
+    animation: bounce 1.3s infinite;
+}
+
+@keyframes bounce {
+    0%, 80%, 100% { transform: scale(0); }
+    40% { transform: scale(1); }
+}
+
+/* ---------- INPUT ---------- */
+.input-container {
+    display: flex;
+    padding: 12px;
+    background: #dfe4ff;
+}
+
+body.dark .input-container {
+    background: #2a2f3a;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+button {
+    margin-left: 8px;
+    background: var(--primary);
+    border: none;
+    padding: 12px 16px;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* ---------- CARD OUTPUT STYLE ---------- */
+.card {
+    padding: 10px;
+    margin-top: 5px;
+    background: rgba(255,255,255,0.7);
+    border-radius: 8px;
+    border-left: 4px solid var(--primary);
+}
+
+body.dark .card {
+    background: #1f2430;
+}
