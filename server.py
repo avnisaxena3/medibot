@@ -33,5 +33,5 @@ def chat():
 
 
 if __name__ == "__main__":
-    print("🚀 Server running at http://127.0.0.1:5501")
-    app.run(host="127.0.0.1", port=5501, debug=True)
+    print("🚀 Server running at http://127.0.0.1:5502")
+    app.run(host="127.0.0.1", port=5502, debug=True)
