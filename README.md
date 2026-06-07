@@ -109,7 +109,7 @@ MIT License - See LICENSE file for details
 
 ## Author
 
-Your Name / Your Organization
+Avni Saxena
 
 ## Support
 
